@@ -1,0 +1,3 @@
+jwt:
+  secret: "dfdfdsefe"
+  expiration: 259200

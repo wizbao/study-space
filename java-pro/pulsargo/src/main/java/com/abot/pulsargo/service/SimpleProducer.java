@@ -1,11 +1,12 @@
 package com.abot.pulsargo.service;
 
-import jakarta.annotation.Resource;
 import org.apache.pulsar.client.api.Producer;
 import org.apache.pulsar.client.api.PulsarClient;
 import org.apache.pulsar.client.api.PulsarClientException;
 import org.apache.pulsar.client.api.Schema;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.Resource;
 
 
 /**

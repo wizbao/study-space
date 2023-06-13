@@ -3,7 +3,6 @@ package com.abot.transactiongo.service;
 import com.abot.transactiongo.entity.Actor;
 import com.abot.transactiongo.mapper.ActorMapper;
 import com.baomidou.mybatisplus.extension.service.IService;
-import jakarta.annotation.Resource;
 
 /**
 * @author admin

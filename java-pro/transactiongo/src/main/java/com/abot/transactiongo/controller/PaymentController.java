@@ -2,10 +2,10 @@ package com.abot.transactiongo.controller;
 
 import com.abot.transactiongo.entity.Payment;
 import com.abot.transactiongo.service.PaymentService;
-import jakarta.annotation.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import java.math.BigDecimal;
 import java.util.Optional;
 

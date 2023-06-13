@@ -2,8 +2,8 @@ package com.abot.dynamicdb.service;
 
 import com.abot.dynamicdb.entity.Actor;
 import com.abot.dynamicdb.entity.City;
-import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
+import javax.annotation.Resource;
 
 /**
  * 动态数据源服务

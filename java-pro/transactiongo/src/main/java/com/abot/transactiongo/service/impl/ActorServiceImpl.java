@@ -4,14 +4,13 @@ import com.abot.transactiongo.entity.Actor;
 import com.abot.transactiongo.mapper.ActorMapper;
 import com.abot.transactiongo.service.ActorService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import jakarta.annotation.Resource;
-import org.springframework.aop.config.AopConfigUtils;
 import org.springframework.aop.framework.AopContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Date;

@@ -1,9 +1,10 @@
 package com.abot.dynamicdb;
 
 import com.abot.dynamicdb.service.DBService;
-import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import javax.annotation.Resource;
 
 @SpringBootTest
 class DynamicdbApplicationTests {

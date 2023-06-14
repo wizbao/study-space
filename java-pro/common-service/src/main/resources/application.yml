@@ -1,3 +1,25 @@
 jwt:
   secret: "dfdfdsefe"
   expiration: 259200
+
+server:
+  port: 8080
+
+# springdoc
+springdoc:
+  swagger-ui:
+    # 修改Swagger UI路径
+    path: /swagger-ui.html
+    # 开启Swagger UI界面
+    enabled: true
+  api-docs:
+    # 修改api-docs路径
+    path: /v3/api-docs
+    # 开启api-docs
+    enabled: true
+  # 配置需要生成接口文档的扫描包
+  packages-to-scan: com.abot.common.controller
+  # 配置需要生成接口文档的接口路径
+#  paths-to-match: /brand/**,/admin/**
+
+

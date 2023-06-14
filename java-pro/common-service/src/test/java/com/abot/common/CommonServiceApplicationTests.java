@@ -2,9 +2,10 @@ package com.abot.common;
 
 import com.abot.common.config.JwtConfig;
 import com.abot.common.util.JwtTokenUtil;
-import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import javax.annotation.Resource;
 
 @SpringBootTest
 class CommonServiceApplicationTests {

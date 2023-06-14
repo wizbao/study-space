@@ -6,6 +6,8 @@ import com.abot.dynamicdb.service.ActorService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+
 /**
 * @author admin
 * @description 针对表【actor】的数据库操作Service实现
@@ -14,9 +16,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class ActorServiceImpl extends ServiceImpl<ActorMapper, Actor>
     implements ActorService {
+    @Resource
+    private ActorMapper actorMapper;
+    @Override
     public Actor getActorById(Integer id){
         Actor actor = this.getById(id);
         return actor;
+    }
+
+    public int updateActor(Actor actor) {
+        return actorMapper.updateById(actor);
     }
 }
 

@@ -1,0 +1,6 @@
+server:
+  port: 8082
+
+info:
+  name: application-test
+diff: application-test-diff

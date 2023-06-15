@@ -74,3 +74,54 @@ swagger2->swagger3
 如果您使用一个对象来捕获多个请求查询参数，请注释该方法参数@ParameterObject
 
 此步骤是可选的：仅当您有多个 Docketbeans 时才用GroupedOpenApibeans 替换它们。
+
+## 配置文件
+### 优先级
+1、在同一级目录下(除后缀外其他部分都相同)配置文件的优先级：properties(最高) > yml > yaml(最低)， 优先级高的配置会覆盖优先级低的配置。  
+2、配置文件在不同目录的优先级如下(从上往下优先级逐级降低，优先级高的配置会覆盖优先级低的配置)：  
+项目名/config/XXX配置文件 (优先级最高)  
+项目名/XXX配置文件  
+项目名/src/main/resources/config/XXX配置文件  
+项目名/src/main/resources/XXX配置文件 (优先级最低)  
+3、优先级高的会先读取，再去读取优先级低的。如果读取的配置发生冲突，优先级高的配置会覆盖优先级低的配置；不冲突的配置共存互补。  
+
+### 使用maven工具切换不同环境的配置文件，无需手动修改yml代码
+1、配置pom文件
+```yaml
+<profiles>
+        <!-- 开发环境 -->
+        <profile>
+            <id>dev</id>
+            <properties>
+                <env>dev</env><!-- 之前写的@env@就是通过这里的配置切换环境 -->
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault><!-- 指定缺省环境 -->
+            </activation>
+        </profile>
+        <!-- 测试环境 -->
+        <profile>
+            <id>test</id>
+            <properties>
+                <env>test</env>
+            </properties>
+        </profile>
+        <!-- 生产环境 -->
+        <profile>
+            <id>prod</id>
+            <properties>
+                <env>prod</env>
+            </properties>
+        </profile>
+    </profiles>
+```
+2、在application.yml中配置
+```yaml
+spring:
+  profiles:
+    active: '@env@' # @env@是pom文件中指定的标签
+```
+**注意**
+- 每次使用maven工具切换完环境后需要刷新maven，否则切换环境无效
+- 使用`@@`指定激活文件时，报错`found character '@' that cannot start any token. (Do not use @ for indentation)`，
+加上单引号或双引号即可解决。

@@ -25,6 +25,7 @@ public class Actor implements Serializable {
     /**
      * 
      */
+    @TableField
     private String firstName;
 
     /**

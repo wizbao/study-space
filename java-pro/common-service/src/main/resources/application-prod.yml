@@ -1,0 +1,6 @@
+server:
+  port: 8084
+
+info:
+  name: application-prod
+diff: application-prod-diff

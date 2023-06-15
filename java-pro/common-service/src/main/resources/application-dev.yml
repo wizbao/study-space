@@ -1,0 +1,6 @@
+server:
+  port: 8083
+
+info:
+  name: application-dev
+diff: application-dev-diff

@@ -18,6 +18,7 @@ import org.springframework.stereotype.Service;
 public class CityServiceImpl extends ServiceImpl<CityMapper, City>
     implements CityService {
 
+    @Override
     public City getCityById(Integer id){
         City city = this.getById(id);
         return city;

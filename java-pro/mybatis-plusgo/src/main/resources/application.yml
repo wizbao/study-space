@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    dynamic:
+      primary: self_db
+      datasource:
+        self_db:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://localhost:3306/self_db
+          username: root
+          password: qlk123456
+        sakila:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://localhost:3306/sakila
+          username: root
+          password: qlk123456

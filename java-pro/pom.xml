@@ -35,9 +35,15 @@
         <module>pulsargo</module>
         <module>transactiongo</module>
         <module>mybatis-plusgo</module>
+        <module>service-consumer</module>
+        <module>service-provider</module>
     </modules>
     <dependencies>
-<!--        nacos客户端-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-loadbalancer</artifactId>
+        </dependency>
+        <!--  nacos客户端-->
         <dependency>
             <groupId>com.alibaba.nacos</groupId>
             <artifactId>nacos-client</artifactId>
